@@ -2,6 +2,15 @@
 
 Alp_to_Morse = { "a": ".-", "b": "-...", "c": "-.--" }
 
+def ToMorseCode_Function():
+    for letter in alp_text:
+        for key, value in Alp_to_Morse.items():
+            if letter == value:
+                print(value)
+
+def FromMorseCode_Function():
+    print("YZ")
+
 def selection_function():
     print("For translation to Morse code select 1, for translation from morse code select 2.")
     selection = input()
@@ -17,15 +26,6 @@ def selection_function():
         global morse_text
         morse_text = input ()
         FromMorseCode_Function()
-    
-def ToMorseCode_Function():
-    for letter in alp_text:
-        for key, value in Alp_to_Morse.items():
-            if letter == value:
-                print(value)
-                
-def FromMorseCode_Function():
-    print("YZ")
   
 print("Hello in Morse code translater!")  
 selection_function()
